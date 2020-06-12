@@ -1,3 +1,4 @@
+#Pratik Mali
 
 from PIL import Image 
 
