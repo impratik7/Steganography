@@ -2,6 +2,7 @@
 
 from PIL import Image 
 
+#3D aray of image
 def genData(data): 
 		
 		newd = [] 
@@ -10,7 +11,7 @@ def genData(data):
 			newd.append(format(ord(i), '08b')) 
 		return newd 
 		
-
+#Extract pixels
 def modPix(pix, data): 
 	
 	datalist = genData(data) 
@@ -42,6 +43,7 @@ def modPix(pix, data):
 		yield pix[3:6] 
 		yield pix[6:9] 
 
+#Encode text in image		
 def encode_enc(newimg, data): 
 	w = newimg.size[0] 
 	(x, y) = (0, 0) 
@@ -56,7 +58,7 @@ def encode_enc(newimg, data):
 		else: 
 			x += 1
 			
-
+#Encoding workflow
 def encode(): 
 	img = input("Enter image name (with extension): ") 
 	image = Image.open(img, 'r') 
@@ -71,7 +73,7 @@ def encode():
 	new_img_name = input("Enter the name of new image (with extension): ") 
 	newimg.save(new_img_name, str(new_img_name.split(".")[1].upper())) 
 
-
+#Decoding workflow
 def decode(): 
 	img = input("Enter image name (with extension) :") 
 	image = Image.open(img, 'r') 
