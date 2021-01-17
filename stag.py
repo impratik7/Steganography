@@ -58,7 +58,7 @@ def encode_enc(newimg, data):
 			
 
 def encode(): 
-	img = input("Enter image name(with extension): ") 
+	img = input("Enter image name (with extension): ") 
 	image = Image.open(img, 'r') 
 	
 	data = input("Enter data to be encoded : ") 
