@@ -73,7 +73,7 @@ def encode():
 
 
 def decode(): 
-	img = input("Enter image name(with extension) :") 
+	img = input("Enter image name (with extension) :") 
 	image = Image.open(img, 'r') 
 	
 	data = '' 
